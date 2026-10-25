@@ -1,0 +1,14 @@
+PARI stack size set to 6000000000 bytes, maximum size set to 6000001024
+q=13 p=1009: 1004 smooth affine points of X_1(13)(F_p)
+   m=3 (generic degree 3): 2 exceptional points; j (mod p) -> CM discriminants with that j: {(0, (-3,)): 2}
+   m=4 (generic degree 2): 2 exceptional points; j (mod p) -> CM discriminants with that j: {(0, (-3,)): 2}
+   m=5 (generic degree 3): 6 exceptional points; j (mod p) -> CM discriminants with that j: {(719, (-4,)): 6}
+   m=6 (generic degree 3): 6 exceptional points; j (mod p) -> CM discriminants with that j: {(719, (-4,)): 6}
+q=13 p=2003: 2088 smooth affine points of X_1(13)(F_p)
+PARI stack size set to 6000000000 bytes, maximum size set to 6000001024
+q=19 p=1009: 1107 smooth affine points of X_1(19)(F_p)
+q=19 p=2017: 1866 smooth affine points of X_1(19)(F_p)
+   m=4 (generic degree 4): 12 exceptional points; j (mod p) -> CM discriminants with that j: {(1558, (-12,)): 9, (0, (-3,)): 3}
+   m=7 (generic degree 4): 3 exceptional points; j (mod p) -> CM discriminants with that j: {(0, (-3,)): 3}
+   m=8 (generic degree 4): 3 exceptional points; j (mod p) -> CM discriminants with that j: {(0, (-3,)): 3}
+   m=9 (generic degree 4): 3 exceptional points; j (mod p) -> CM discriminants with that j: {(0, (-3,)): 3}

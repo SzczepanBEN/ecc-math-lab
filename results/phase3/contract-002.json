@@ -1,0 +1,69 @@
+{
+  "claim_id": "T13_SLICE",
+  "mathematics": {
+    "assertion_tested": "General slice prover at q=13 reproduces the symbolic T13 certificate (existence for m=4 at d=2, uniqueness, lower bounds for all m).",
+    "coefficient_domain": "exact: Q(b,c) and Q[b] slices (PARI); F_p arithmetic (src/ec.py, numpy int64 with p < 2^20)",
+    "conventions": "Tate normal form y^2+(1-c)xy-by = x^3-bx^2, P=(0,0); relation Y psi(X)+phi(X)=0 with deg <= d on pairs (x(kP), x(mkP)), k=1..(q-1)/2; C3 formula from experiments/exp_c3_small_subgroups.conjectured_dmin",
+    "inputs": [
+      "q = 13",
+      "src/__init__.py",
+      "src/ec.py",
+      "src/cm.py",
+      "experiments/__init__.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c3_small_subgroups.py",
+      "experiments/phase3/tateq.py",
+      "experiments/phase3/slices.py",
+      "experiments/phase3/prove_q.py",
+      "src/curvegen.py",
+      "src/harness.py"
+    ],
+    "bounds": {
+      "q": 13,
+      "m": "1..6"
+    },
+    "non_claims": [
+      "Regression of the method; proves T13 generic statements again by a second method"
+    ]
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c3_small_subgroups.py",
+    "experiments/phase3/tateq.py",
+    "experiments/phase3/slices.py",
+    "experiments/phase3/prove_q.py",
+    "src/curvegen.py",
+    "src/harness.py"
+  ],
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random(q) for the F_p model check only",
+    "seed": 13
+  },
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.13.17"
+    },
+    {
+      "name": "PARI/GP",
+      "version": "2.17.2"
+    },
+    {
+      "name": "cypari2",
+      "version": "2.2.4"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    }
+  ]
+}

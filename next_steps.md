@@ -153,3 +153,24 @@ Infrastructure:
   texts.
 - Put the project under git and push it somewhere. Manifests currently record
   `commit: unavailable`, and the container is ephemeral.
+
+---
+
+# After Phase 3 (q = 13 and q = 19 proved; combined C2+C3 law supported)
+
+See `findings_phase3.md`. Candidate next steps, none started:
+
+1. **More primes q with the slice prover.** The next non-trivial cases are q = 31 (m = 10 and
+   11 at degrees 5 and 6), q = 37 and q = 43. Before running, estimate the Bézout bounds, which
+   grow quickly with q: measure F's degree and the minor degree bound first.
+2. **Exact exceptional locus for q = 19,** to upgrade the combined law there from evidence to
+   theorem. This needs either faster resultants (modular methods, or Sage/Singular via conda)
+   or a cusp/degree argument.
+3. **Mechanism.** Two candidate routes to a general proof:
+   - degree counting on X₁(q), via orders of x(kP) at cusps;
+   - an explicit construction of R for m = −1/3 valid for all q ≡ 1 (mod 6).
+
+   q = 13 and q = 19 give explicit maps R to study.
+4. **Literature (still blocked).** Lange–Winterhof (AAECC 2003; WCC 2005), Kiltz–Winterhof,
+   Fricke functions, rational interpolation on torsion subgroups.
+5. **Push the repository** once it exists (see README).

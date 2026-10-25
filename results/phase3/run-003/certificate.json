@@ -1,0 +1,272 @@
+{
+  "q": 19,
+  "M": 9,
+  "d_int": 4,
+  "C3_prediction": {
+    "1": 1,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 3,
+    "7": 4,
+    "8": 4,
+    "9": 4
+  },
+  "F_bidegree_b_c": [
+    15,
+    22
+  ],
+  "F_total_degree": 24,
+  "F_irreducible_over_Q": true,
+  "F_monic_in_b": true,
+  "raw_numerator_factor_count": 1,
+  "Fp_model_check_points": 76,
+  "existence": {
+    "6": {
+      "d": 3,
+      "all_minors_vanish": true,
+      "n_minors": 9,
+      "min_slices": 391,
+      "max_bezout_bound": 6816
+    }
+  },
+  "uniqueness": {
+    "6": true
+  },
+  "lower_bound": {
+    "2": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    },
+    "3": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    },
+    "4": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    },
+    "5": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    },
+    "6": {
+      "d": 2,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "slice_c0": 2
+      }
+    },
+    "7": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    },
+    "8": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    },
+    "9": {
+      "d": 3,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "slice_c0": 2
+      }
+    }
+  },
+  "denominator_resultants": {
+    "b - c": {
+      "resultant_variable": "b",
+      "resultant": "-c^24"
+    },
+    "b + (-c^2 - c)": {
+      "resultant_variable": "b",
+      "resultant": "-c^30"
+    },
+    "b^2 - c*b - c^3": {
+      "resultant_variable": "b",
+      "resultant": "-c^51"
+    },
+    "c": {
+      "resultant_variable": "c",
+      "resultant": "b^15"
+    },
+    "2*b^2 + (-c^2 - 3*c)*b + c^2": {
+      "resultant_variable": "b",
+      "resultant": "c^52"
+    },
+    "b^3 - 3*c*b^2 + (c^3 + 3*c^2)*b + (-c^5 - c^4 - c^3)": {
+      "resultant_variable": "b",
+      "resultant": "c^80"
+    }
+  },
+  "F_at_c0": "b^15",
+  "all_checks_pass": true,
+  "runtime_s": 107.4
+}

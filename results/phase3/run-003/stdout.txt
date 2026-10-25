@@ -1,0 +1,65 @@
+PARI stack size set to 6000000000 bytes, maximum size set to 6000001024
+q=19 m=1: C3=1 existence=None lower=False  [0s]
+q=19 m=2: C3=4 existence=None lower=True  [0s]
+q=19 m=3: C3=4 existence=None lower=True  [0s]
+q=19 m=4: C3=4 existence=None lower=True  [0s]
+q=19 m=5: C3=4 existence=None lower=True  [0s]
+q=19 m=6: C3=3 existence={'d': 3, 'all_minors_vanish': True, 'n_minors': 9, 'min_slices': 391, 'max_bezout_bound': 6816} lower=True  [107s]
+q=19 m=7: C3=4 existence=None lower=True  [107s]
+q=19 m=8: C3=4 existence=None lower=True  [107s]
+q=19 m=9: C3=4 existence=None lower=True  [107s]
+{
+ "q": 19,
+ "C3_prediction": {
+  "1": 1,
+  "2": 4,
+  "3": 4,
+  "4": 4,
+  "5": 4,
+  "6": 3,
+  "7": 4,
+  "8": 4,
+  "9": 4
+ },
+ "existence": {
+  "6": {
+   "d": 3,
+   "all_minors_vanish": true,
+   "n_minors": 9,
+   "min_slices": 391,
+   "max_bezout_bound": 6816
+  }
+ },
+ "uniqueness": {
+  "6": true
+ },
+ "denominator_resultants": {
+  "b - c": {
+   "resultant_variable": "b",
+   "resultant": "-c^24"
+  },
+  "b + (-c^2 - c)": {
+   "resultant_variable": "b",
+   "resultant": "-c^30"
+  },
+  "b^2 - c*b - c^3": {
+   "resultant_variable": "b",
+   "resultant": "-c^51"
+  },
+  "c": {
+   "resultant_variable": "c",
+   "resultant": "b^15"
+  },
+  "2*b^2 + (-c^2 - 3*c)*b + c^2": {
+   "resultant_variable": "b",
+   "resultant": "c^52"
+  },
+  "b^3 - 3*c*b^2 + (c^3 + 3*c^2)*b + (-c^5 - c^4 - c^3)": {
+   "resultant_variable": "b",
+   "resultant": "c^80"
+  }
+ },
+ "F_at_c0": "b^15",
+ "all_checks_pass": true,
+ "runtime_s": 107.4
+}

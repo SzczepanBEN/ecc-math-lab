@@ -1,0 +1,69 @@
+{
+  "claim_id": "C2C3_COMBINED_CM",
+  "mathematics": {
+    "assertion_tested": "For q in {13, 19} and the 8 class-number-one discriminants -3..-19: on a CM curve with P of order q (q || #E when q splits, q^2 | #E otherwise), d_min(m) = min(C3(m), min N(alpha) over endomorphisms acting as +-m on <P>) for every m.",
+    "coefficient_domain": "exact: Q(b,c) and Q[b] slices (PARI); F_p arithmetic (src/ec.py, numpy int64 with p < 2^20)",
+    "conventions": "Tate normal form y^2+(1-c)xy-by = x^3-bx^2, P=(0,0); relation Y psi(X)+phi(X)=0 with deg <= d on pairs (x(kP), x(mkP)), k=1..(q-1)/2; C3 formula from experiments/exp_c3_small_subgroups.conjectured_dmin",
+    "inputs": [
+      "q in {13, 19}; D in {-3,-4,-7,-8,-11,-12,-16,-19}",
+      "src/__init__.py",
+      "src/ec.py",
+      "src/cm.py",
+      "src/curvegen.py",
+      "src/harness.py",
+      "experiments/__init__.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c3_small_subgroups.py",
+      "experiments/phase3/cm_combined_test.py"
+    ],
+    "bounds": {
+      "q": [
+        13,
+        19
+      ],
+      "curves": "one per (q, D), p in [3000, 400000]"
+    },
+    "non_claims": [
+      "One curve per (q, D)",
+      "Conjecture test, not a proof"
+    ]
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "src/curvegen.py",
+    "src/harness.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c3_small_subgroups.py",
+    "experiments/phase3/cm_combined_test.py"
+  ],
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random(20261030)",
+    "seed": 20261030
+  },
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.13.17"
+    },
+    {
+      "name": "PARI/GP",
+      "version": "2.17.2"
+    },
+    {
+      "name": "cypari2",
+      "version": "2.2.4"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    }
+  ]
+}

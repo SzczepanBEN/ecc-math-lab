@@ -1,0 +1,74 @@
+{
+  "claim_id": "EXC_FP",
+  "mathematics": {
+    "assertion_tested": "Enumerate all smooth affine points of X_1(q)(F_p) for (q,p) in {(13,1009),(13,2003),(19,1009),(19,2017)}; list points where some multiplier has minimal degree below C3, with j mod p and matching class-number-one discriminants.",
+    "coefficient_domain": "exact: Q(b,c) and Q[b] slices (PARI); F_p arithmetic (src/ec.py, numpy int64 with p < 2^20)",
+    "conventions": "Tate normal form y^2+(1-c)xy-by = x^3-bx^2, P=(0,0); relation Y psi(X)+phi(X)=0 with deg <= d on pairs (x(kP), x(mkP)), k=1..(q-1)/2; C3 formula from experiments/exp_c3_small_subgroups.conjectured_dmin",
+    "inputs": [
+      "q in {13, 19}; p in {1009, 2003} and {1009, 2017}",
+      "src/__init__.py",
+      "src/ec.py",
+      "src/cm.py",
+      "experiments/__init__.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c3_small_subgroups.py",
+      "experiments/phase3/tateq.py",
+      "experiments/phase3/slices.py",
+      "experiments/phase3/exceptional_fp.py",
+      "src/curvegen.py",
+      "src/harness.py"
+    ],
+    "bounds": {
+      "q": [
+        13,
+        19
+      ],
+      "p": "listed",
+      "points": "all affine smooth F_p-points"
+    },
+    "non_claims": [
+      "Evidence about exceptional points in characteristic p only",
+      "Not a determination of the characteristic-0 exceptional locus for q = 19"
+    ]
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c3_small_subgroups.py",
+    "experiments/phase3/tateq.py",
+    "experiments/phase3/slices.py",
+    "experiments/phase3/exceptional_fp.py",
+    "src/curvegen.py",
+    "src/harness.py"
+  ],
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.13.17"
+    },
+    {
+      "name": "PARI/GP",
+      "version": "2.17.2"
+    },
+    {
+      "name": "cypari2",
+      "version": "2.2.4"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    }
+  ]
+}

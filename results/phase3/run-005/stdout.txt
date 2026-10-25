@@ -1,0 +1,16 @@
+q=13 D=-3 (split; q||#E) p=118213: combined prediction matches 6/6; below-C3 multipliers {3: 1, 4: 1}; mismatches (obs, pred) {}
+q=13 D=-4 (split; q||#E) p=263369: combined prediction matches 6/6; below-C3 multipliers {5: 1, 6: 2}; mismatches (obs, pred) {}
+q=13 D=-7 (inert/ramified; q^2|#E) p=170353: combined prediction matches 6/6; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=13 D=-8 (inert/ramified; q^2|#E) p=92353: combined prediction matches 6/6; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=13 D=-11 (inert/ramified; q^2|#E) p=237901: combined prediction matches 6/6; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=13 D=-12 (split; q||#E) p=22993: combined prediction matches 6/6; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=13 D=-16 (split; q||#E) p=234121: combined prediction matches 6/6; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=13 D=-19 (inert/ramified; q^2|#E) p=70981: combined prediction matches 6/6; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=19 D=-3 (split; q||#E) p=353767: combined prediction matches 9/9; below-C3 multipliers {4: 3, 7: 1, 8: 1, 9: 3}; mismatches (obs, pred) {}
+q=19 D=-4 (inert/ramified; q^2|#E) p=220021: combined prediction matches 9/9; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=19 D=-7 (inert/ramified; q^2|#E) p=124147: combined prediction matches 9/9; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=19 D=-8 (split; q||#E) p=93971: combined prediction matches 9/9; below-C3 multipliers {5: 3, 6: 2, 7: 3}; mismatches (obs, pred) {}
+q=19 D=-11 (inert/ramified; q^2|#E) p=9007: combined prediction matches 9/9; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=19 D=-12 (split; q||#E) p=263941: combined prediction matches 9/9; below-C3 multipliers {4: 3}; mismatches (obs, pred) {}
+q=19 D=-16 (inert/ramified; q^2|#E) p=162641: combined prediction matches 9/9; below-C3 multipliers {}; mismatches (obs, pred) {}
+q=19 D=-19 (inert/ramified; q^2|#E) p=339151: combined prediction matches 9/9; below-C3 multipliers {}; mismatches (obs, pred) {}

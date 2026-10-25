@@ -1,0 +1,155 @@
+{
+  "q": 13,
+  "M": 6,
+  "d_int": 3,
+  "C3_prediction": {
+    "1": 1,
+    "2": 3,
+    "3": 3,
+    "4": 2,
+    "5": 3,
+    "6": 3
+  },
+  "F_bidegree_b_c": [
+    7,
+    10
+  ],
+  "F_total_degree": 11,
+  "F_irreducible_over_Q": true,
+  "F_monic_in_b": true,
+  "raw_numerator_factor_count": 1,
+  "Fp_model_check_points": 76,
+  "existence": {
+    "4": {
+      "d": 2,
+      "all_minors_vanish": true,
+      "n_minors": 1,
+      "min_slices": 96,
+      "max_bezout_bound": 671
+    }
+  },
+  "uniqueness": {
+    "4": true
+  },
+  "lower_bound": {
+    "2": {
+      "d": 2,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "slice_c0": 2
+      }
+    },
+    "3": {
+      "d": 2,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "slice_c0": 2
+      }
+    },
+    "4": {
+      "d": 1,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "slice_c0": 2
+      }
+    },
+    "5": {
+      "d": 2,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "slice_c0": 2
+      }
+    },
+    "6": {
+      "d": 2,
+      "nonzero_minor": {
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "slice_c0": 2
+      }
+    }
+  },
+  "denominator_resultants": {
+    "b - c": {
+      "resultant_variable": "b",
+      "resultant": "c^11"
+    },
+    "b + (-c^2 - c)": {
+      "resultant_variable": "b",
+      "resultant": "-c^14"
+    }
+  },
+  "F_at_c0": "b^7",
+  "all_checks_pass": true,
+  "runtime_s": 0.1
+}

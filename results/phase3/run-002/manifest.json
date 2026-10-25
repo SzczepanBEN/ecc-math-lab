@@ -1,0 +1,213 @@
+{
+  "schema_version": 2,
+  "claim_id": "T13_SLICE",
+  "repository": {
+    "commit": "69f43e65b3cde93177313bb7982e8ade8d9f3883",
+    "dirty": true
+  },
+  "command": [
+    "python3",
+    "experiments/phase3/prove_q.py",
+    "13",
+    "--out",
+    "results/phase3/run-002"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.13.17"
+      },
+      {
+        "name": "Python",
+        "version": "3.13.17"
+      },
+      {
+        "name": "PARI/GP",
+        "version": "2.17.2"
+      },
+      {
+        "name": "cypari2",
+        "version": "2.2.4"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.3"
+      }
+    ],
+    "hardware": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+  },
+  "mathematics": {
+    "assertion_tested": "General slice prover at q=13 reproduces the symbolic T13 certificate (existence for m=4 at d=2, uniqueness, lower bounds for all m).",
+    "coefficient_domain": "exact: Q(b,c) and Q[b] slices (PARI); F_p arithmetic (src/ec.py, numpy int64 with p < 2^20)",
+    "conventions": "Tate normal form y^2+(1-c)xy-by = x^3-bx^2, P=(0,0); relation Y psi(X)+phi(X)=0 with deg <= d on pairs (x(kP), x(mkP)), k=1..(q-1)/2; C3 formula from experiments/exp_c3_small_subgroups.conjectured_dmin",
+    "inputs": [
+      "q = 13",
+      "src/__init__.py",
+      "src/ec.py",
+      "src/cm.py",
+      "experiments/__init__.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c3_small_subgroups.py",
+      "experiments/phase3/tateq.py",
+      "experiments/phase3/slices.py",
+      "experiments/phase3/prove_q.py",
+      "src/curvegen.py",
+      "src/harness.py"
+    ],
+    "bounds": {
+      "q": 13,
+      "m": "1..6"
+    },
+    "non_claims": [
+      "Regression of the method; proves T13 generic statements again by a second method"
+    ]
+  },
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random(q) for the F_p model check only",
+    "seed": 13
+  },
+  "run": {
+    "started_at": "2026-10-25T03:50:38.531762+00:00",
+    "runtime_seconds": 1.17514,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 3000.0,
+    "max_output_bytes": 8388608,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": 3000,
+      "max_cores": 1,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c3_small_subgroups.py",
+    "experiments/phase3/tateq.py",
+    "experiments/phase3/slices.py",
+    "experiments/phase3/prove_q.py",
+    "src/curvegen.py",
+    "src/harness.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/ec.py",
+      "sha256": "9256525c4878ea67f83d866de6d1033f88e854b6602526ca2e27eb7ec6073e77",
+      "sha256_after": "9256525c4878ea67f83d866de6d1033f88e854b6602526ca2e27eb7ec6073e77"
+    },
+    {
+      "path": "src/cm.py",
+      "sha256": "d55389b6b75d8fd526eb406db5c35a341a05264b77f722487ed88d7e74d3e734",
+      "sha256_after": "d55389b6b75d8fd526eb406db5c35a341a05264b77f722487ed88d7e74d3e734"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/common.py",
+      "sha256": "5f28fbca1c76e2b58dcbcbf3fa9c171b816ecec7c7ac7057b6e47ec9e03a59a9",
+      "sha256_after": "5f28fbca1c76e2b58dcbcbf3fa9c171b816ecec7c7ac7057b6e47ec9e03a59a9"
+    },
+    {
+      "path": "experiments/exp_a_geometry.py",
+      "sha256": "7f8a86bb5b37a8b9c2b00ab07682103abf45676366f3e1ce203105c7ba69b7c4",
+      "sha256_after": "7f8a86bb5b37a8b9c2b00ab07682103abf45676366f3e1ce203105c7ba69b7c4"
+    },
+    {
+      "path": "experiments/exp_b_hypotheses.py",
+      "sha256": "9be5cf2234a3aa651007dc65701e941c1f4678719ed7c8937a9e191a114568ae",
+      "sha256_after": "9be5cf2234a3aa651007dc65701e941c1f4678719ed7c8937a9e191a114568ae"
+    },
+    {
+      "path": "experiments/exp_c3_small_subgroups.py",
+      "sha256": "de8d82a3f23163395d0d451e16bd24b72c19038f428076964af4b3cc77ff871a",
+      "sha256_after": "de8d82a3f23163395d0d451e16bd24b72c19038f428076964af4b3cc77ff871a"
+    },
+    {
+      "path": "experiments/phase3/tateq.py",
+      "sha256": "0f0e44db1bf0132f7b12499cf8cede28b2837e95cc87ae97b5be27beeeece1bc",
+      "sha256_after": "0f0e44db1bf0132f7b12499cf8cede28b2837e95cc87ae97b5be27beeeece1bc"
+    },
+    {
+      "path": "experiments/phase3/slices.py",
+      "sha256": "d92cd1683b26592237beb9f852218e620d066722387847f8df0f74eb6028d323",
+      "sha256_after": "d92cd1683b26592237beb9f852218e620d066722387847f8df0f74eb6028d323"
+    },
+    {
+      "path": "experiments/phase3/prove_q.py",
+      "sha256": "cbdef51dda7a1fc64ae1a484027246c075c67fdf24449d6b4a58ec8252ba0b59",
+      "sha256_after": "cbdef51dda7a1fc64ae1a484027246c075c67fdf24449d6b4a58ec8252ba0b59"
+    },
+    {
+      "path": "src/curvegen.py",
+      "sha256": "392a2037a9a29a2ff90f0ec05e8589b20c7e96dfb71ea3f0376e40bda0c34f63",
+      "sha256_after": "392a2037a9a29a2ff90f0ec05e8589b20c7e96dfb71ea3f0376e40bda0c34f63"
+    },
+    {
+      "path": "src/harness.py",
+      "sha256": "582717d5c05a869f267ad2cfffc8ef5385f6c3acefa85b48017f4a8d728fa99e",
+      "sha256_after": "582717d5c05a869f267ad2cfffc8ef5385f6c3acefa85b48017f4a8d728fa99e"
+    }
+  ],
+  "output_directory": "results/phase3/run-002",
+  "declared_results": [
+    "results/phase3/run-002/certificate.json"
+  ],
+  "outputs": [
+    {
+      "path": "results/phase3/run-002/stdout.txt",
+      "sha256": "d92047a1eeb41b4ad3e4ed8953920f212706fe181e55a929f14da65f463489e3",
+      "kind": "log"
+    },
+    {
+      "path": "results/phase3/run-002/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "results/phase3/run-002/certificate.json",
+      "sha256": "c12930ec37c2a4f7ad2867e1fc7149d0fa35a0d7c15bc7b8b56fc8bb6c5c748a",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them.",
+    "The POSIX CPU-time limit is per process, not an aggregate descendant budget."
+  ]
+}

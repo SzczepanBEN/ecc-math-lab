@@ -470,3 +470,66 @@ This upgrades a load-bearing input from snippet level to independently computed.
 **Interpretation.** R2 together with the curve independence of P2.4 strongly supports the
 hypothesis that C3 is an identity among level-q Fricke functions ℘(k/q; τ) on X₁(q). This
 remains unproved.
+
+---
+
+# Phase 3 — direction A: proving C3 for fixed q
+
+Approved by the project lead: "proceed with direction 1, starting with q = 13", together with a
+request to create a GitHub repository.
+- **Repository:** the session's GitHub API token is invalid, so a new repository cannot be
+  created from here. The project was put under local git (branch `main`), ready to push once the
+  user creates an empty repository and it is attached.
+- **Commits:** 229edff (Phases 1–2), 6dbc732 (q = 13 certificate), 69f43e6 (general prover).
+
+## P3.1 Sanity check of the q = 13 predictions
+
+C3 at q = 13 (M = 6, d_int = 3) predicts:
+- d(±4) = 2, since 4 ≡ −1/3;
+- d(±1) = 1;
+- all others 3.
+
+Observed on 5 generic F_p curves and 2 complex lattices: exact agreement.
+
+## P3.2 Universal model and T13 (run-001, symbolic)
+
+- **Model:** Tate normal form over ℚ(b, c). The numerator of x(6P) − x(7P) is one irreducible F
+  of bidegree (7, 10), monic in b. Independent check: 165 F_p-points of F give exact order 13
+  with `src/ec.py`.
+- **Main identity:** det A_{4,2} ≡ 0 mod F. The other determinants (m = 2, 3, 5, 6) are non-zero.
+- **Supporting items:** rank 5 (uniqueness); a non-zero 4×4 minor at d = 1; denominators only
+  c, b−c, b−c²−c, meeting F only at the singular cubic; F | det over ℤ.
+- **Exceptional loci (exact):**
+  - m = 2: cusps only;
+  - m = 3: j = 0 (4 points);
+  - m = 5, 6: j = 1728 (6 points);
+  - m = 4 at degree 1: exactly the 4 j = 0 points, which was **predicted before computing**.
+- **Mechanism probe:** R for m = 4 has no zeros or poles at 2- or 3-division roots (negative).
+- **Bugs caught:**
+  - PARI's `gcd` over POLMOD coefficients returned 1 wrongly; replaced by `nffactor`.
+  - PARI's predefined `y` had the wrong variable priority; replaced by `varlower`.
+  - Evaluating j at a cusp divided by zero; cusps are now classified via Δ.
+  - The integrality check misread a c-denominator as non-integral content, and compared PARI
+    type strings incorrectly; both rewritten.
+
+## P3.3 q = 19 and a scalable method
+
+- **Symbolic method:** the 8×8 determinants over ℚ(b, c) did not finish (> 17 CPU-minutes,
+  1.1 GB). Recorded as resource-bounded and inconclusive; it was not used as evidence.
+- **Slice-Bézout certificates** (`experiments/phase3/slices.py`): non-vanishing from one slice;
+  vanishing from enough slices that the slice points exceed deg F · deg G.
+  - Regression: it reproduces T13.
+  - Negative control: m = 2 is correctly refused.
+  - Bug caught by the control: a `varlower` variable name collided with PARI's `t`, which made
+    the total degree 0 and the vanishing certificate trivially true. Fixed and re-verified.
+- **T19 (run-003):** see `findings_phase3.md`.
+
+## P3.4 Exceptional points and the combined law
+
+**F_p enumeration of X₁(q)(F_p)** (run-004):
+- q = 13: p = 1009 reproduces the exact locus; p = 2003 has none, as expected, since there
+  j = 0 and j = 1728 are supersingular.
+- q = 19: p = 2017 gives j = 0 and j = 54000 (D = −12) exceptions only; p = 1009 gives none.
+
+**Combined law** d_min = min(C3, N(α)), tested on CM curves for q ∈ {13, 19} and 8
+discriminants each (run-005): **16/16 cases match on every multiplier**.

@@ -113,3 +113,28 @@ byte-identical versions; their manifests are stale because a script was edited a
 (`results/phase2/contract-00N.json`) and a manifest with input hashes, argv, limits and output
 hashes, made with the computation-audit bounded runner. There is no git repository, so each
 manifest records the commit as "unavailable" and relies on input-file hashes instead.
+
+## Phase 3: proving C3 for fixed q (q = 13, 19)
+
+The code is in `experiments/phase3/`:
+- `tate13.py`, `tateq.py`: Tate normal form of the universal curve with a point of order q, and
+  the order-q locus F_q(b, c) = 0, a plane model of X₁(q).
+- `prove_q13.py`: symbolic certificate for q = 13 over ℚ(b, c)/(F).
+- `slices.py`, `prove_q.py`: Bézout slice certificates for any prime q (the scalable method).
+- `exceptional.py`: the exact exceptional locus for q = 13 (cusps, j = 0, j = 1728).
+- `exceptional_fp.py`: complete F_p enumerations of X₁(q).
+- `cm_combined_test.py`: test of the combined C2 + C3 law on CM curves.
+- Exploratory scripts: `../explore_c3_char0.py` (characteristic 0, numerical) and
+  `../explore_c3_torus.py` (nodal limit).
+
+Extra dependency: `cypari2` (PARI/GP 2.17.2) from PyPI.
+
+```bash
+pip install cypari2
+python3 experiments/phase3/prove_q13.py --out results/phase3/q13      # < 1 s
+python3 experiments/phase3/prove_q.py 19 --out results/phase3/q19     # minutes
+python3 experiments/phase3/cm_combined_test.py 13 19
+```
+
+Evidence runs are in `results/phase3/run-00N`, with contracts and validated manifests. From
+Phase 3 on, manifests record real git commits. Results are summarised in `findings_phase3.md`.
