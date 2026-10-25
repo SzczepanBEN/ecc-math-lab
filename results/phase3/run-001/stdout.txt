@@ -1,0 +1,105 @@
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+{
+  "theorem": "T13 (C3 at q = 13)",
+  "item1_model": {
+    "F": "b^7 - 6*c*b^6 + (4*c^3 + 15*c^2)*b^5 + (-9*c^5 - 15*c^4 - 20*c^3)*b^4 + (5*c^7 + 24*c^6 + 21*c^5 + 15*c^4)*b^3 + (-c^9 - 6*c^8 - 21*c^7 - 13*c^6 - 6*c^5)*b^2 + (6*c^8 + 3*c^7 + c^6)*b + c^10",
+    "bidegree_b_c": [
+      7,
+      10
+    ],
+    "irreducible_over_Q": true,
+    "monic_in_b": true,
+    "integral": true,
+    "Fp_points_checked_exact_order_13": 165
+  },
+  "item2_ranks": {
+    "det_A_4_2_is_zero_in_K": true,
+    "rank_A_4_2_is_5": true,
+    "A_4_1_has_nonzero_4x4_minor": true,
+    "det_A_2_2_is_nonzero_in_K": true,
+    "det_A_3_2_is_nonzero_in_K": true,
+    "det_A_5_2_is_nonzero_in_K": true,
+    "det_A_6_2_is_nonzero_in_K": true,
+    "m1_degree1": true
+  },
+  "item3_integrality": {
+    "x_kP_denominators_only_c_bminusc_bminusc2minusc_and_integral_numerators": true,
+    "resultant_F_with_denominator_factors": {
+      "c": "c",
+      "b - c": "Mat([c, 11])",
+      "b + (-c^2 - c)": "Mat([c, 14])"
+    },
+    "F_divides_primitive_numerator_of_det_A42_over_Z": true,
+    "Delta_factorization": "[b, 3; 16*b^2 + (-8*c^2 - 20*c + 1)*b + (c^4 - 3*c^3 + 3*c^2 - c), 1]"
+  },
+  "item4_exceptional": {
+    "m=2, d=2": [
+      {
+        "component": "c = 0 (singular cubic, b = 0)",
+        "multiplicity": 243
+      },
+      {
+        "component": "c-field degree 6",
+        "multiplicity": 1,
+        "type": "CUSP (Delta = 0: degenerate curve)",
+        "c4_zero": false
+      }
+    ],
+    "m=3, d=2": [
+      {
+        "component": "c = 0 (singular cubic, b = 0)",
+        "multiplicity": 239
+      },
+      {
+        "component": "c-field degree 4",
+        "multiplicity": 3,
+        "type": "elliptic curve",
+        "j_minpoly_degree": 1,
+        "j_minpoly": "x",
+        "CM_discriminant": -3
+      }
+    ],
+    "m=5, d=2": [
+      {
+        "component": "c = 0 (singular cubic, b = 0)",
+        "multiplicity": 225
+      },
+      {
+        "component": "c-field degree 6",
+        "multiplicity": 2,
+        "type": "elliptic curve",
+        "j_minpoly_degree": 1,
+        "j_minpoly": "x - 1728",
+        "CM_discriminant": -4
+      }
+    ],
+    "m=6, d=2": [
+      {
+        "component": "c = 0 (singular cubic, b = 0)",
+        "multiplicity": 243
+      },
+      {
+        "component": "c-field degree 6",
+        "multiplicity": 2,
+        "type": "elliptic curve",
+        "j_minpoly_degree": 1,
+        "j_minpoly": "x - 1728",
+        "CM_discriminant": -4
+      }
+    ],
+    "m=4, d=1 (all 4x4 minors)": [
+      {
+        "component": "c = 0 (singular cubic)"
+      },
+      {
+        "component": "c-field degree 4",
+        "all_15_minors_vanish": true,
+        "cusp": false,
+        "j_minpoly": "x",
+        "CM_discriminant": -3
+      }
+    ]
+  },
+  "all_checks_pass": true,
+  "runtime_s": 0.3
+}

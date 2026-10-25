@@ -1,0 +1,59 @@
+{
+  "claim_id": "T13_C3_AT_Q13",
+  "mathematics": {
+    "assertion_tested": "Over the function field K of X_1(13) (Tate normal form, F = numerator of x(6P)-x(7P)): det A_{4,2} = 0 in K, rank A_{4,2} = 5, A_{4,1} has a nonzero 4x4 minor, det A_{m,2} != 0 for m = 2,3,5,6; x(kP) have denominators only c, b-c, b-c^2-c and integral numerators; F divides the primitive integral numerator of det A_{4,2} over Z; denominators meet F only at c = 0; exceptional loci of the generic statements consist of cusps (m=2), j=0 points (m=3; m=4 at d=1) and j=1728 points (m=5,6).",
+    "coefficient_domain": "Q(b,c) and Z[b,c] exact (PARI); number fields for exceptional points; F_p model check with src/ec.py",
+    "conventions": "Tate normal form y^2 + (1-c)xy - by = x^3 - bx^2, P = (0,0); A_{m,d} rows [X^0..X^d, X^0 Y..X^d Y] with (X,Y) = (x(kP), x(mkP)), k = 1..6",
+    "inputs": [
+      "Tate normal form over Q(b,c)",
+      "q = 13, m = 1..6, d = 1, 2 (d = 3 trivial)",
+      "src/__init__.py",
+      "src/ec.py",
+      "experiments/phase3/tate13.py",
+      "experiments/phase3/exceptional.py",
+      "experiments/phase3/prove_q13.py"
+    ],
+    "bounds": {
+      "q": 13,
+      "m": "1..6",
+      "d": "1..3",
+      "Fp_model_check": "5 primes x 30 random c each"
+    },
+    "non_claims": [
+      "Proves C3 only for q = 13",
+      "Does not explain the mechanism",
+      "Relies on the standard fact that every (E,P) with ord(P) >= 4 has a Tate normal form",
+      "Tate-form x-coordinate; in characteristic != 2,3 equivalent to short-Weierstrass x by an affine change, which preserves degrees"
+    ]
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "experiments/phase3/tate13.py",
+    "experiments/phase3/exceptional.py",
+    "experiments/phase3/prove_q13.py"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.13.17"
+    },
+    {
+      "name": "PARI/GP",
+      "version": "2.17.2"
+    },
+    {
+      "name": "cypari2",
+      "version": "2.2.4"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    }
+  ],
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random(13) (F_p model check only; does not affect the exact items)",
+    "seed": 13
+  }
+}
