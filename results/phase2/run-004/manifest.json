@@ -1,0 +1,217 @@
+{
+  "schema_version": 2,
+  "claim_id": "C3_HELDOUT",
+  "repository": {
+    "commit": "unavailable",
+    "dirty": true
+  },
+  "command": [
+    "python3",
+    "experiments/exp_c3_small_subgroups.py",
+    "--out",
+    "results/phase2/run-004",
+    "--label",
+    "heldout",
+    "--qs",
+    "67,79,89,103,113,127,131,137,139,149,151,163,167,173,179,181,191,193,197,199",
+    "--curves-per-q",
+    "1",
+    "--seed",
+    "20261029",
+    "--cm=-3,-4,-7"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.13.17"
+      },
+      {
+        "name": "Python",
+        "version": "3.13.17"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.3"
+      },
+      {
+        "name": "scipy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      }
+    ],
+    "hardware": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+  },
+  "mathematics": {
+    "assertion_tested": "Pre-registered held-out test of conjecture C3 (formula frozen in exp_c3_small_subgroups.conjectured_dmin before this run): for 20 primes q not used in fitting, one fresh generic curve each, d_min(m) equals the C3 prediction for every m. Side check (not part of C3): agreement on CM curves D in {-3,-4,-7}.",
+    "coefficient_domain": "F_p exact (numpy int64 with p < 2^14, all products < 2^41; Python ints for polynomials and number theory)",
+    "conventions": "Relation Y*psi(X) + phi(X) = 0 with deg phi, deg psi <= d on all M=(q-1)/2 distinct pairs (x_k, x_{mk}); d_min(m) = least such d (exact rank over F_p, monotone in d, binary search); interpolation threshold d_int = least d with 2d+2 > M.",
+    "inputs": [
+      "q in {67,79,89,103,113,127,131,137,139,149,151,163,167,173,179,181,191,193,197,199}, 1 generic curve per q, seed 20261029; CM side check D in {-3,-4,-7}",
+      "src/__init__.py",
+      "src/ec.py",
+      "src/cm.py",
+      "src/curvegen.py",
+      "src/harness.py",
+      "experiments/__init__.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c2_threshold.py",
+      "experiments/exp_c3_small_subgroups.py"
+    ],
+    "bounds": {
+      "q": "20 held-out primes in [67,199]",
+      "curves_per_q": 1,
+      "multipliers": "m in [1, M]",
+      "d": "binary search in [1, d_int]"
+    },
+    "non_claims": [
+      "Does not prove C3",
+      "Generic curves with q || N and |D_K| > 4q only; CM curves are a labelled side check",
+      "q <= 199 only"
+    ]
+  },
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random (prime, curve and point selection)",
+    "seed": 20261029
+  },
+  "run": {
+    "started_at": "2026-10-25T01:57:03.685749+00:00",
+    "runtime_seconds": 54.878448,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 1700.0,
+    "max_output_bytes": 4194304,
+    "resource_limits": {
+      "memory_bytes": 8000000000,
+      "cpu_seconds": 1700,
+      "max_cores": 1,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "src/curvegen.py",
+    "src/harness.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c2_threshold.py",
+    "experiments/exp_c3_small_subgroups.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/ec.py",
+      "sha256": "9256525c4878ea67f83d866de6d1033f88e854b6602526ca2e27eb7ec6073e77",
+      "sha256_after": "9256525c4878ea67f83d866de6d1033f88e854b6602526ca2e27eb7ec6073e77"
+    },
+    {
+      "path": "src/cm.py",
+      "sha256": "d55389b6b75d8fd526eb406db5c35a341a05264b77f722487ed88d7e74d3e734",
+      "sha256_after": "d55389b6b75d8fd526eb406db5c35a341a05264b77f722487ed88d7e74d3e734"
+    },
+    {
+      "path": "src/curvegen.py",
+      "sha256": "392a2037a9a29a2ff90f0ec05e8589b20c7e96dfb71ea3f0376e40bda0c34f63",
+      "sha256_after": "392a2037a9a29a2ff90f0ec05e8589b20c7e96dfb71ea3f0376e40bda0c34f63"
+    },
+    {
+      "path": "src/harness.py",
+      "sha256": "582717d5c05a869f267ad2cfffc8ef5385f6c3acefa85b48017f4a8d728fa99e",
+      "sha256_after": "582717d5c05a869f267ad2cfffc8ef5385f6c3acefa85b48017f4a8d728fa99e"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/common.py",
+      "sha256": "5f28fbca1c76e2b58dcbcbf3fa9c171b816ecec7c7ac7057b6e47ec9e03a59a9",
+      "sha256_after": "5f28fbca1c76e2b58dcbcbf3fa9c171b816ecec7c7ac7057b6e47ec9e03a59a9"
+    },
+    {
+      "path": "experiments/exp_a_geometry.py",
+      "sha256": "7f8a86bb5b37a8b9c2b00ab07682103abf45676366f3e1ce203105c7ba69b7c4",
+      "sha256_after": "7f8a86bb5b37a8b9c2b00ab07682103abf45676366f3e1ce203105c7ba69b7c4"
+    },
+    {
+      "path": "experiments/exp_b_hypotheses.py",
+      "sha256": "9be5cf2234a3aa651007dc65701e941c1f4678719ed7c8937a9e191a114568ae",
+      "sha256_after": "9be5cf2234a3aa651007dc65701e941c1f4678719ed7c8937a9e191a114568ae"
+    },
+    {
+      "path": "experiments/exp_c2_threshold.py",
+      "sha256": "87d2103f7e39bb4dfe8120bccde585e4cd90dd095fcf9aa6efeb58416d72e427",
+      "sha256_after": "87d2103f7e39bb4dfe8120bccde585e4cd90dd095fcf9aa6efeb58416d72e427"
+    },
+    {
+      "path": "experiments/exp_c3_small_subgroups.py",
+      "sha256": "86feaf68638106ccf828246940fba59444f83f8004d9120265822d7b075614f7",
+      "sha256_after": "86feaf68638106ccf828246940fba59444f83f8004d9120265822d7b075614f7"
+    }
+  ],
+  "output_directory": "results/phase2/run-004",
+  "declared_results": [
+    "results/phase2/run-004/summary.json",
+    "results/phase2/run-004/summary.md"
+  ],
+  "outputs": [
+    {
+      "path": "results/phase2/run-004/stdout.txt",
+      "sha256": "d83bde23df9d1de66a4930e4a53675cdabfd9ea0ef5e46d7ca0a39ee83903e81",
+      "kind": "log"
+    },
+    {
+      "path": "results/phase2/run-004/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "results/phase2/run-004/summary.json",
+      "sha256": "3aaecb21d3bbc5f187045b3f1083cda3ecf314fa3db530bd74298ba15c1293fd",
+      "kind": "result"
+    },
+    {
+      "path": "results/phase2/run-004/summary.md",
+      "sha256": "a548a3b0a3aa5751e10bb13538c2869de9e2aec7ea7579da85bc093644aa7f6d",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them.",
+    "The POSIX CPU-time limit is per process, not an aggregate descendant budget."
+  ]
+}

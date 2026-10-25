@@ -1,0 +1,8 @@
+    D=-3 p=9157 q=61: d_int=15 first extras at d=15  extras only >= threshold: True  never missing: True
+    D=-4 p=14557 q=41: d_int=10 first extras at d=10  extras only >= threshold: True  never missing: True
+    D=-7 p=9767 q=113: d_int=28 first extras at d=19  extras only >= threshold: False  never missing: True
+    D=-8 p=12553 q=59: d_int=14 first extras at d=13  extras only >= threshold: False  never missing: True
+   D=-11 p=10789 q=59: d_int=14 first extras at d=12  extras only >= threshold: False  never missing: True
+ generic p=10331 q=157: d_int=39 first extras at d=26  extras only >= threshold: False  never missing: True
+ generic p=13901 q=61: d_int=15 first extras at d=10  extras only >= threshold: False  never missing: True
+ generic p=8293 q=137: d_int=34 first extras at d=29  extras only >= threshold: False  never missing: True

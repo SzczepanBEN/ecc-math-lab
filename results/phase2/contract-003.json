@@ -1,0 +1,68 @@
+{
+  "claim_id": "C3_FIT",
+  "mathematics": {
+    "assertion_tested": "Records d_min(m) for every m on 20 generic curves (10 primes q, 2 curves each, q || N, |D_K| > 4q) and evaluates conjecture C3 (formula in exp_c3_small_subgroups.conjectured_dmin); this is the data set C3 was fitted on.",
+    "coefficient_domain": "F_p exact (numpy int64 with p < 2^14, all products < 2^41; Python ints for polynomials and number theory)",
+    "conventions": "Relation Y*psi(X) + phi(X) = 0 with deg phi, deg psi <= d on all M=(q-1)/2 distinct pairs (x_k, x_{mk}); d_min(m) = least such d (exact rank over F_p, monotone in d, binary search); interpolation threshold d_int = least d with 2d+2 > M.",
+    "inputs": [
+      "q in {61,73,97,109,157,59,71,83,101,107}, 2 generic curves per q, p in [2^13,2^14), seed 20261028",
+      "src/__init__.py",
+      "src/ec.py",
+      "src/cm.py",
+      "src/curvegen.py",
+      "src/harness.py",
+      "experiments/__init__.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c2_threshold.py",
+      "experiments/exp_c3_small_subgroups.py"
+    ],
+    "bounds": {
+      "q": "10 primes listed",
+      "curves_per_q": 2,
+      "multipliers": "m in [1, M] (m and q-m equivalent)",
+      "d": "binary search in [1, d_int]"
+    },
+    "non_claims": [
+      "Fitting data: agreement here is not independent evidence for C3",
+      "Generic curves only"
+    ]
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "src/curvegen.py",
+    "src/harness.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c2_threshold.py",
+    "experiments/exp_c3_small_subgroups.py"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.13.17"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2"
+    }
+  ],
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random (prime, curve and point selection)",
+    "seed": 20261028
+  }
+}

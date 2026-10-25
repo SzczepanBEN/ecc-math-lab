@@ -1,0 +1,214 @@
+{
+  "schema_version": 2,
+  "claim_id": "C2_ENDOMORPHISM_MULTIPLIERS",
+  "repository": {
+    "commit": "unavailable",
+    "dirty": true
+  },
+  "command": [
+    "python3",
+    "experiments/exp_c_endomorphisms.py",
+    "--dmax",
+    "20",
+    "--dmax163",
+    "42",
+    "--out",
+    "results/phase2/run-001"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.13.17"
+      },
+      {
+        "name": "Python",
+        "version": "3.13.17"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.3"
+      },
+      {
+        "name": "scipy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      }
+    ],
+    "hardware": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+  },
+  "mathematics": {
+    "assertion_tested": "For each tested curve E/F_p (one per class-number-one order O, j = j(O) mod p, plus 4 generic controls) and a point G' of prime order q: for every d <= dmax, the set of m in [1, q-1] whose minimal-degree rational map R with x(mP) = R(x(P)) for all P in <G'> has degree exactly d equals S_d = {alpha mod q : alpha in O, N(alpha) = d}, computed independently from (p, t, q, D_O). Secondary finite checks: CM field of t^2-4p equals that of the table order; batched screen agrees with an independent per-m rank test on audited subsets; every found map has deg num = d, deg den = d-1 and denominator s*h^2 with s | x^3+ax+b; m = 2 reproduces the closed-form doubling formula; the order inferred blindly from (trace, degree) of the found multipliers equals the table order.",
+    "coefficient_domain": "F_p exact (numpy int64 with p < 2^14, all products < 2^41; Python ints for polynomials and number theory)",
+    "conventions": "Short Weierstrass y^2 = x^3 + a x + b; O = Z[w], w = (D + sqrt(D))/2, N(x + y w) = x^2 + D x y + (D^2 - D)/4 y^2; relation Y*psi(X) + phi(X) = 0 with deg phi, deg psi <= d; minimal degree = least d with a verified relation; S_d computed via the eigenvalue mu of w on <G'> from pi = (t - vD)/2 + v w acting as 1.",
+    "inputs": [
+      "13 class-number-one discriminants D in {-3,-4,-7,-8,-11,-12,-16,-19,-27,-28,-43,-67,-163} with j-invariants from src/cm.py",
+      "4 generic control curves with |D_K| > 4*dmax",
+      "curve/point selection seeds MASTER_SEED=20261026 plus offsets as coded",
+      "src/ec.py",
+      "src/cm.py",
+      "src/curvegen.py",
+      "src/harness.py",
+      "experiments/common.py",
+      "experiments/exp_a_geometry.py",
+      "experiments/exp_b_hypotheses.py",
+      "experiments/exp_c_endomorphisms.py"
+    ],
+    "bounds": {
+      "p_range": "[2^13, 2^14)",
+      "cofactor_max": 8,
+      "dmax": 20,
+      "dmax_D_minus_163": 42,
+      "multipliers": "all m in [1, q-1]",
+      "verification": "every candidate relation checked on all q-1 points"
+    },
+    "non_claims": [
+      "Does not prove conjecture C2 (no multipliers beyond endomorphisms) for other primes, degrees, or curves",
+      "Does not prove End(E) = O; it tests finite consequences that discriminate O from O_K and Z[pi]",
+      "Says nothing about cryptographic-size curves or about discrete logarithms",
+      "Correctness of the class-number-one j-table and of Deuring's reduction theorem is supported here only by search-snippet-level literature checks plus the finite consistency checks above"
+    ]
+  },
+  "randomness": {
+    "used": true,
+    "generator": "Python random.Random (curve, prime and point selection; seeds MASTER_SEED + offsets) and numpy.random.default_rng(20261026) (verification sampling and audit subsets)",
+    "seed": 20261026
+  },
+  "run": {
+    "started_at": "2026-10-25T01:25:04.993827+00:00",
+    "runtime_seconds": 128.035944,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 1500.0,
+    "max_output_bytes": 4194304,
+    "resource_limits": {
+      "memory_bytes": 8000000000,
+      "cpu_seconds": 1500,
+      "max_cores": 1,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "src/__init__.py",
+    "src/ec.py",
+    "src/cm.py",
+    "src/curvegen.py",
+    "src/harness.py",
+    "experiments/__init__.py",
+    "experiments/common.py",
+    "experiments/exp_a_geometry.py",
+    "experiments/exp_b_hypotheses.py",
+    "experiments/exp_c_endomorphisms.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/ec.py",
+      "sha256": "9256525c4878ea67f83d866de6d1033f88e854b6602526ca2e27eb7ec6073e77",
+      "sha256_after": "9256525c4878ea67f83d866de6d1033f88e854b6602526ca2e27eb7ec6073e77"
+    },
+    {
+      "path": "src/cm.py",
+      "sha256": "d55389b6b75d8fd526eb406db5c35a341a05264b77f722487ed88d7e74d3e734",
+      "sha256_after": "d55389b6b75d8fd526eb406db5c35a341a05264b77f722487ed88d7e74d3e734"
+    },
+    {
+      "path": "src/curvegen.py",
+      "sha256": "392a2037a9a29a2ff90f0ec05e8589b20c7e96dfb71ea3f0376e40bda0c34f63",
+      "sha256_after": "392a2037a9a29a2ff90f0ec05e8589b20c7e96dfb71ea3f0376e40bda0c34f63"
+    },
+    {
+      "path": "src/harness.py",
+      "sha256": "582717d5c05a869f267ad2cfffc8ef5385f6c3acefa85b48017f4a8d728fa99e",
+      "sha256_after": "582717d5c05a869f267ad2cfffc8ef5385f6c3acefa85b48017f4a8d728fa99e"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/common.py",
+      "sha256": "5f28fbca1c76e2b58dcbcbf3fa9c171b816ecec7c7ac7057b6e47ec9e03a59a9",
+      "sha256_after": "5f28fbca1c76e2b58dcbcbf3fa9c171b816ecec7c7ac7057b6e47ec9e03a59a9"
+    },
+    {
+      "path": "experiments/exp_a_geometry.py",
+      "sha256": "7f8a86bb5b37a8b9c2b00ab07682103abf45676366f3e1ce203105c7ba69b7c4",
+      "sha256_after": "7f8a86bb5b37a8b9c2b00ab07682103abf45676366f3e1ce203105c7ba69b7c4"
+    },
+    {
+      "path": "experiments/exp_b_hypotheses.py",
+      "sha256": "9be5cf2234a3aa651007dc65701e941c1f4678719ed7c8937a9e191a114568ae",
+      "sha256_after": "9be5cf2234a3aa651007dc65701e941c1f4678719ed7c8937a9e191a114568ae"
+    },
+    {
+      "path": "experiments/exp_c_endomorphisms.py",
+      "sha256": "8dd3eb7d1efb5db229628c5759958d24ea061c8237d55d5c2839aceb1d9052de",
+      "sha256_after": "8dd3eb7d1efb5db229628c5759958d24ea061c8237d55d5c2839aceb1d9052de"
+    }
+  ],
+  "output_directory": "results/phase2/run-001",
+  "declared_results": [
+    "results/phase2/run-001/summary.json",
+    "results/phase2/run-001/summary.md",
+    "results/phase2/run-001/C1_multipliers_by_degree.png"
+  ],
+  "outputs": [
+    {
+      "path": "results/phase2/run-001/stdout.txt",
+      "sha256": "76e058ad7b8dc46576064cbbc9b2b656e58d18a8de35877db37d6651a7da0524",
+      "kind": "log"
+    },
+    {
+      "path": "results/phase2/run-001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "results/phase2/run-001/summary.json",
+      "sha256": "faa849f770a18df641cd57f37a6acff01dd543ca358f9db5b1741a2e3dd6906e",
+      "kind": "result"
+    },
+    {
+      "path": "results/phase2/run-001/summary.md",
+      "sha256": "bda1676063f1c5e7d0e4e232c693883812f61b25353b15bbbd4fb035de11426d",
+      "kind": "result"
+    },
+    {
+      "path": "results/phase2/run-001/C1_multipliers_by_degree.png",
+      "sha256": "70a3f8087c2e62b4072af80ba5425c890d747a1609c3e8fb8d11ee31ae43d471",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them.",
+    "The POSIX CPU-time limit is per process, not an aggregate descendant budget."
+  ]
+}

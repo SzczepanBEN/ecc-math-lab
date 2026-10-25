@@ -1,0 +1,311 @@
+{
+  "master_seed": 20261025,
+  "bits": 17,
+  "curves": [
+    {
+      "name": "GEN-A",
+      "family": "generic",
+      "p": 128483,
+      "a": 24512,
+      "b": 66006,
+      "seed": 20261025,
+      "order": 128747,
+      "trace": -263,
+      "structure": [
+        128747,
+        1
+      ],
+      "generator": [
+        14206,
+        112558
+      ],
+      "properties": {
+        "j_invariant": 41038,
+        "j0": false,
+        "j1728": false,
+        "hasse_ok": true,
+        "supersingular": false,
+        "anomalous": false,
+        "prime_order": true,
+        "order_factorization": {
+          "128747": 1
+        },
+        "largest_prime_factor": 128747,
+        "cofactor": 1,
+        "embedding_degree_of_r": null,
+        "twist_order": 128221,
+        "frobenius_discriminant": -444763,
+        "cm_field_squarefree_d": -444763,
+        "p_mod_3": 2,
+        "p_mod_4": 3,
+        "aut_group_order": 2,
+        "notes": []
+      }
+    },
+    {
+      "name": "GEN-B",
+      "family": "generic",
+      "p": 99377,
+      "a": 41730,
+      "b": 46564,
+      "seed": 20262025,
+      "order": 99529,
+      "trace": -151,
+      "structure": [
+        99529,
+        1
+      ],
+      "generator": [
+        64712,
+        9780
+      ],
+      "properties": {
+        "j_invariant": 11891,
+        "j0": false,
+        "j1728": false,
+        "hasse_ok": true,
+        "supersingular": false,
+        "anomalous": false,
+        "prime_order": true,
+        "order_factorization": {
+          "99529": 1
+        },
+        "largest_prime_factor": 99529,
+        "cofactor": 1,
+        "embedding_degree_of_r": null,
+        "twist_order": 99227,
+        "frobenius_discriminant": -374707,
+        "cm_field_squarefree_d": -374707,
+        "p_mod_3": 2,
+        "p_mod_4": 1,
+        "aut_group_order": 2,
+        "notes": []
+      }
+    },
+    {
+      "name": "GEN-C6",
+      "family": "generic",
+      "p": 123887,
+      "a": 65122,
+      "b": 5691,
+      "seed": 20263040,
+      "order": 123846,
+      "trace": 42,
+      "structure": [
+        123846,
+        1
+      ],
+      "generator": [
+        66324,
+        65101
+      ],
+      "properties": {
+        "j_invariant": 90003,
+        "j0": false,
+        "j1728": false,
+        "hasse_ok": true,
+        "supersingular": false,
+        "anomalous": false,
+        "prime_order": false,
+        "order_factorization": {
+          "2": 1,
+          "3": 1,
+          "20641": 1
+        },
+        "largest_prime_factor": 20641,
+        "cofactor": 6,
+        "embedding_degree_of_r": null,
+        "twist_order": 123930,
+        "frobenius_discriminant": -493784,
+        "cm_field_squarefree_d": -123446,
+        "p_mod_3": 2,
+        "p_mod_4": 3,
+        "aut_group_order": 2,
+        "notes": []
+      }
+    },
+    {
+      "name": "J0-A",
+      "family": "j0",
+      "p": 118423,
+      "a": 0,
+      "b": 87528,
+      "seed": 20261025,
+      "order": 119107,
+      "trace": -683,
+      "structure": [
+        119107,
+        1
+      ],
+      "generator": [
+        75613,
+        77925
+      ],
+      "properties": {
+        "j_invariant": 0,
+        "j0": true,
+        "j1728": false,
+        "hasse_ok": true,
+        "supersingular": false,
+        "anomalous": false,
+        "prime_order": true,
+        "order_factorization": {
+          "119107": 1
+        },
+        "largest_prime_factor": 119107,
+        "cofactor": 1,
+        "embedding_degree_of_r": null,
+        "twist_order": 117741,
+        "frobenius_discriminant": -7203,
+        "cm_field_squarefree_d": -3,
+        "p_mod_3": 1,
+        "p_mod_4": 3,
+        "aut_group_order": 6,
+        "cube_roots_of_unity": [
+          41092,
+          77330
+        ],
+        "notes": [
+          "j=0 ordinary: order-3 automorphism (x,y)->(beta x, y), GLV endomorphism"
+        ]
+      }
+    },
+    {
+      "name": "J0-B",
+      "family": "j0",
+      "p": 114547,
+      "a": 0,
+      "b": 29121,
+      "seed": 20262025,
+      "order": 115099,
+      "trace": -551,
+      "structure": [
+        115099,
+        1
+      ],
+      "generator": [
+        10207,
+        102632
+      ],
+      "properties": {
+        "j_invariant": 0,
+        "j0": true,
+        "j1728": false,
+        "hasse_ok": true,
+        "supersingular": false,
+        "anomalous": false,
+        "prime_order": true,
+        "order_factorization": {
+          "115099": 1
+        },
+        "largest_prime_factor": 115099,
+        "cofactor": 1,
+        "embedding_degree_of_r": null,
+        "twist_order": 113997,
+        "frobenius_discriminant": -154587,
+        "cm_field_squarefree_d": -3,
+        "p_mod_3": 1,
+        "p_mod_4": 3,
+        "aut_group_order": 6,
+        "cube_roots_of_unity": [
+          3533,
+          111013
+        ],
+        "notes": [
+          "j=0 ordinary: order-3 automorphism (x,y)->(beta x, y), GLV endomorphism"
+        ]
+      }
+    },
+    {
+      "name": "J0-SS",
+      "family": "j0",
+      "p": 72269,
+      "a": 0,
+      "b": 44436,
+      "seed": 20261025,
+      "order": 72270,
+      "trace": 0,
+      "structure": [
+        72270,
+        1
+      ],
+      "generator": [
+        54804,
+        48486
+      ],
+      "properties": {
+        "j_invariant": 0,
+        "j0": true,
+        "j1728": false,
+        "hasse_ok": true,
+        "supersingular": true,
+        "anomalous": false,
+        "prime_order": false,
+        "order_factorization": {
+          "2": 1,
+          "3": 2,
+          "5": 1,
+          "11": 1,
+          "73": 1
+        },
+        "largest_prime_factor": 73,
+        "cofactor": 990,
+        "embedding_degree_of_r": 2,
+        "twist_order": 72270,
+        "frobenius_discriminant": -289076,
+        "cm_field_squarefree_d": -72269,
+        "p_mod_3": 2,
+        "p_mod_4": 1,
+        "aut_group_order": 2,
+        "cube_roots_of_unity": [],
+        "notes": [
+          "supersingular (t=0): #E=p+1, embedding degree <= 2 (MOV/Frey-Rueck)",
+          "j=0 with p=2 mod 3: x->x^3 is a bijection of F_p, hence supersingular"
+        ]
+      }
+    },
+    {
+      "name": "J1728",
+      "family": "j1728",
+      "p": 72269,
+      "a": 44436,
+      "b": 0,
+      "seed": 20261025,
+      "order": 72746,
+      "trace": -476,
+      "structure": [
+        72746,
+        1
+      ],
+      "generator": [
+        71233,
+        54818
+      ],
+      "properties": {
+        "j_invariant": 1728,
+        "j0": false,
+        "j1728": true,
+        "hasse_ok": true,
+        "supersingular": false,
+        "anomalous": false,
+        "prime_order": false,
+        "order_factorization": {
+          "2": 1,
+          "36373": 1
+        },
+        "largest_prime_factor": 36373,
+        "cofactor": 2,
+        "embedding_degree_of_r": null,
+        "twist_order": 71794,
+        "frobenius_discriminant": -62500,
+        "cm_field_squarefree_d": -1,
+        "p_mod_3": 2,
+        "p_mod_4": 1,
+        "aut_group_order": 4,
+        "notes": [
+          "j=1728 ordinary: order-4 automorphism (x,y)->(-x, i y); (0,0) is 2-torsion"
+        ]
+      }
+    }
+  ]
+}
